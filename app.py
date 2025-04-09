@@ -33,13 +33,17 @@ st.title("🚀 NeuroConnect: Plataforma Científica Integrada")
 
 # ================================
 # Línea de Tiempo del Nanobot
-# ================================
 st.subheader("📆 Life Cycle Timeline: From Activation to Self-Destruction")
 timeline_data = pd.DataFrame({
     "Fase": ["Nasal Activation", "Cerebral Arrival", "Synaptic Evaluation", "Adaptive Release", "Full Cycle", "Self-Destruction"],
     "Start": ["2025-01-01", "2025-01-01 00:02", "2025-01-01 01:00", "2025-01-04", "2025-01-08", "2035-01-01"],
     "End": ["2025-01-01 00:02", "2025-01-01 01:00", "2025-01-04", "2025-01-08", "2035-01-01", "2035-01-02"]
 })
+
+# 🔧 Conversión a datetime
+timeline_data["Start"] = pd.to_datetime(timeline_data["Start"])
+timeline_data["End"] = pd.to_datetime(timeline_data["End"])
+
 timeline_fig = px.timeline(
     timeline_data,
     x_start="Start",
@@ -50,6 +54,7 @@ timeline_fig = px.timeline(
 )
 timeline_fig.update_layout(template='plotly_dark', paper_bgcolor='#0d1117', font_color='white')
 st.plotly_chart(timeline_fig, use_container_width=True)
+
 
 # ================================
 # Radar Chart de Eficacia Clínica
