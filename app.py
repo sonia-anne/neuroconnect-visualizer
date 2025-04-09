@@ -52,13 +52,29 @@ lifecycle_info = pd.DataFrame({
         "Weeks 1–8",
         "Year 10 or upon host death"
     ],
-    "Description": [
+    "Action/Function": [
         "Insertion via nasal cavity and activation by brain pH.",
         "Crosses cribriform plate avoiding vital structures.",
         "Piezoelectric sensors analyze neuronal activity.",
         "Releases BDNF/VEGF based on AI-guided analysis.",
         "Continuous modulation to emotional and circadian states.",
         "Biodegrades safely post-mission or after death."
+    ],
+    "Structural Details": [
+        "Catheter: Polyurethane ⌀1.5 mm, Graphene shell, 10 μm bot",
+        "Fits through natural nasal passages, larger than RBC (7–8 μm)",
+        "Embedded piezoelectric (ZnO) and optical (Pt-DNA) sensors",
+        "Amber vesicles: nanogram BDNF/VEGF, quantum AI chip",
+        "Microtubule propulsion, graphene antenna, adaptive AI core",
+        "Biodegradable PEG polymer, dissolves with pH change"
+    ],
+    "Scientific Justification": [
+        "Cribriform plate route supported by Nature Nanotech, 2023",
+        "Avoids immune detection and BBB invasion",
+        "Validates neuroactivity before releasing therapy",
+        "Ensures safety and personalization",
+        "Supports chronic modulation unlike pharmacotherapy",
+        "Meets WHO biodegradation guidelines"
     ]
 })
 
@@ -72,7 +88,7 @@ fig_lifecycle = go.Figure(data=[go.Table(
                align='left',
                font=dict(color='white', size=12))
 )])
-fig_lifecycle.update_layout(title="🧬 NeuroConnect Device Lifecycle Timeline", paper_bgcolor='#0d1117')
+fig_lifecycle.update_layout(title="🧬 NeuroConnect Lifecycle: Full Operational Timeline", paper_bgcolor='#0d1117')
 st.plotly_chart(fig_lifecycle, use_container_width=True)
 
 # ------------------------------------------------------------------------------
